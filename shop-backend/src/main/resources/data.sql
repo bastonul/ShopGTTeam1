@@ -1,5 +1,6 @@
 INSERT INTO user_profile (id, name, avatar, activity_points)
-VALUES ('88', 'Ion', 'https://example.com/avatar.jpg', 4000);
+VALUES ('88', 'Alfred', 'https://example.com/avatar.jpg', 4000);
+
 
 INSERT INTO reward (rewardid, name, description, full_description, price, image, category, in_stock, stock_count)
 VALUES 
