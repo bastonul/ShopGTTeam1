@@ -5,3 +5,4 @@ import com.GTteam1.shop_backend.entity.UserProfile;
 
 public interface UserRepository extends JpaRepository<UserProfile, String> {
 }
+//
