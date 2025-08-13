@@ -142,7 +142,7 @@ public class CartService {
             boolean areProduseFizice = cart.getItems().stream().anyMatch(item -> {
                 try {
                     int id = Integer.parseInt(item.getRewardId());
-                    return id <= 10;
+                    return id <= 15;
                 } catch (NumberFormatException e) {
                     return false;
                 }

@@ -55,7 +55,7 @@ public class UserController {
                     boolean isPhysical;
                     try {
                         int id = Integer.parseInt(item.getRewardId());
-                        isPhysical = id <= 10;
+                        isPhysical = id <= 15;
                     } catch (NumberFormatException e) {
                         isPhysical = false;
                     }
