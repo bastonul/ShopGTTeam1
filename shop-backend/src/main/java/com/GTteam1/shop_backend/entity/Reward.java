@@ -1,9 +1,7 @@
 package com.GTteam1.shop_backend.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "reward")
@@ -25,11 +23,29 @@ public class Reward {
 		    private String image;
 		    @Column(name = "category")
 		    private String category;
+		    
 		    @Column(name = "in_stock")
 		    private boolean inStock;
+		    
 		    @Column(name = "stock_count")
 		    private int stockCount;
 			
+		    @Transient
+		    private boolean physical;
+
+		    public boolean isPhysical() {
+		        try {
+		            int idNum = Integer.parseInt(this.id);
+		            return idNum <= 15; 
+		        } catch (NumberFormatException e) {
+		            return false;
+		        }
+		    }
+
+		    public void setPhysical(boolean physical) {
+		        this.physical = physical;
+		    }
+		    
 			public Reward() {}  
 						
 			public Reward(String id, String name, String description, String fullDescription, double price, String image,
